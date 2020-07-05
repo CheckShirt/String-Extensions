@@ -25,7 +25,7 @@ label.attributedText = attributedText
 
 ## Author
 
-Han Sangmin, hahn.sangmin@gmail.com
+ForwardsToBasic, yeehaw@live.co.kr
 
 
 
