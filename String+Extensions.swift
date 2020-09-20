@@ -39,4 +39,15 @@ extension String {
         }
         return parsedRange
     }
+
+  func getFirstMatchRange(in fullWord: String) -> NSRange? {
+        let fullRange = NSRange(location: 0, length: fullWord.endIndex.utf16Offset(in: fullWord))
+        do {
+            let regex = try NSRegularExpression(pattern: self, options: [])
+            let firstMatchRange = regex.rangeOfFirstMatch(in: fullWord, options: [], range: fullRange)
+            return firstMatchRange
+        } catch { }
+        return nil
+    }
+
 }
